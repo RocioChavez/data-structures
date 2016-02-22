@@ -50,10 +50,57 @@ public class List {
         return counter;
     }
     public void printFirstElement(){
-        Node aux2= head;
+        if(head!=null){
+            System.out.println(head.data);
+        }   else {
+            System.out.println("-1");
+        }
         
     }
-}
+    public void printLastElement(){
+        Node aux=head;
+        while(aux.next!=null){
+            aux=aux.next;
+        } 
+        System.out.println(aux.data);
+   }
+    public int Remove(int i){
+	 int data;
+	   if(head==null) {
+	            
+	     }
+	  if(i==0){
+	     head=head.next;
+          }
+	   Node aux =head , p=null;
+	   int counter=0;
+	    for(;counter<i && aux!=null;counter++){
+	      p=aux;
+	      aux=aux.next;
+	       }
+	    data=aux.data;
+	  if(aux!=null){
+	         p.next=aux.next;
+	      }
+          return data;
+    }
+    public void RemoveFirtsElement(){
+	        head=head.next;
+    }
+    public void RemoveLastElement(){
+	        Node aux=head, p=null;
+	        while(aux.next!=null){
+	            p=aux;
+	            aux=aux.next;
+	        }
+	        p.next=null;
+	    }
+
+
+    }
+
+
+
     
     
 
