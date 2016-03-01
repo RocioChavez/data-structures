@@ -20,7 +20,7 @@ public class List {
         Node n= new Node(d);
     
     if(head==null){
-        head=null;
+        head=n;
     }   else {
         Node aux=head;
     while (aux.next!=null){
@@ -34,10 +34,10 @@ public class List {
     public void print (){
         Node aux= head; 
         while (aux!=null){
-            System.out.print(""+ aux.data );
+            System.out.print("    "+ aux.data );
             aux= aux.next;
         }
-        System.out.println  ();
+        System.out.println  ("   ");
         
         }
     public int count (){
@@ -95,9 +95,26 @@ public class List {
 	        }
 	        p.next=null;
 	    }
-
-
+    public void duplicate(){
+        Node aux=head;
+        Node p=head;
+        while(aux.next!=null){
+            aux=aux.next;
+        }
+        int c=count();
+        for(int i=0;i<c;i++){
+            Node n= new Node(p.data);
+            aux.next=n;
+            aux=aux.next;
+            p=p.next;
+            
+            
+        }
+    }   
     }
+
+
+    
 
 
 
