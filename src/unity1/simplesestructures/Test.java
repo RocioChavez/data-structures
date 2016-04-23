@@ -18,7 +18,7 @@ public class Test {
          l.add(20);
          System.out.print ("initial values");
          l.print();
-         int c= l.count ();
+         int c= l.Count ();
          System.out.println("total Nodes:"+c );
         
           
