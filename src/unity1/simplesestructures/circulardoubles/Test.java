@@ -17,5 +17,7 @@ public class Test {
         l.add(5);
         l.add(8);
         l.print();
+        l.MoveFirtstoEnd();
+        l.print();
     }
 }

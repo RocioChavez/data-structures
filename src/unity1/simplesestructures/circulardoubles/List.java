@@ -37,4 +37,11 @@ public class List {
             aux=aux.next; 
         }while(aux!=head);
     }
+    public void MoveLastToBeginning(){
+        head=head.back;
+    }
+    public void MoveFirtstoEnd(){
+        head=head.next;
+    }
+    
 }
