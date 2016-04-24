@@ -135,7 +135,7 @@ public int count (){
         
         Node aux= head;
         int counter =0;
-        while(aux != null){
+        while(aux.next != null){
             counter++;
             aux = aux.next;
         }
@@ -145,17 +145,18 @@ public int count (){
 public void Invert(){
     
     Node aux=head;
-    
+    int cont=0;
     while(aux.next!=null){
+        cont++;
         aux=aux.next;
-}
+    }
     Node last=aux;
     Node head2=aux;
     aux.next=aux.back;
     aux.back=null;
-    int c=count();
     
-    for(int i=1;i<c;i++){
+    System.out.println(cont);
+    for(int i=1;i<cont;i++){
         
     last=aux;
     aux=aux.back;
