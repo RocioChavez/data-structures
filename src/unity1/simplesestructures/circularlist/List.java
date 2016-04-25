@@ -22,10 +22,10 @@ public class List {
           head=n;
        } else {
         
-            while(aux!=head){
+           do{
             p=aux;
             aux=aux.next;
-            }
+            } while(aux!=head);
             n.next=head;
             p.next=n;
             }
