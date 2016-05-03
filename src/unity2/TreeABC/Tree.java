@@ -126,4 +126,106 @@ public class Tree {
        }
         return cont;
    }
+      public void recursivePrint(){
+        
+        recursivePrint(root);
+        System.out.println();
+        
+    }
+    
+    private void recursivePrint(Node r){
+        
+        if(r==null) return;
+        
+        recursivePrint(r.left);
+        System.out.println(""+ r.data);
+        recursivePrint(r.right);
+    }
+    
+    public int recursiveCount(){
+        return recursiveCount(root);
+    }
+    
+    private int recursiveCount(Node r){
+    
+        if(r==null) return 0;
+        
+        return recursiveCount(r.left) +
+                
+        recursiveCount(r.right) +1;
+}
+    
+   public void PreOrderPrint(){
+        
+        PreOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void PreOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        System.out.println(""+ r.data);
+        PreOrderPrint(r.left);
+        PreOrderPrint(r.right);
+    } 
+    
+     public void inOrderPrint(){
+        
+        inOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void inOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        
+        inOrderPrint(r.left);
+        System.out.println(""+ r.data);
+        inOrderPrint(r.right);
+    } 
+    
+     public void PostOrderPrint(){
+        
+        PostOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void PostOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        
+        PostOrderPrint(r.left);
+        PostOrderPrint(r.right);
+        System.out.println(""+ r.data);
+    } 
+    
+    public void PrintLeafs(){
+        PrintLeafs(root);
+        System.out.println();
+    }
+    
+    private void PrintLeafs(Node r){
+        
+        if(r==null) return;
+        
+        PrintLeafs(r.left);
+        if(r.left==null){
+         System.out.println(""+r.data);   
+        }
+         PrintLeafs(r.right);
+         if(r.right==null){
+            System.out.println(""+r.data);
+        }
+                           
+        
+    }
+    
+    
+  
 }
