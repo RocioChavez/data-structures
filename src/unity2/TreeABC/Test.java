@@ -10,13 +10,15 @@ package unity2.TreeABC;
  * @author Acer
  */
 public class Test {
-    public static void main(){
+    public static void main(String Args[]){
         Tree t=new Tree();
         t.add(23);
         t.add(2);
         t.add(6);
         t.add(0);
-        t.printpath(6);
+        t.add(5);
+        t.Draw();
+        t.balance();
         
     }
 }
